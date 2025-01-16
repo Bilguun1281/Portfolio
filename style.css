@@ -20,6 +20,7 @@ p {
   color: rgb(85, 85, 85);
 }
 
+
 /* TRANSITION */
 
 a,
@@ -298,7 +299,7 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
+  flex: 2;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -337,6 +338,7 @@ section {
 }
 
 .article-container {
+  position: relative;
   display: flex;
   text-align: initial;
   flex-wrap: wrap;
@@ -374,8 +376,30 @@ article .icon {
   height: 90%;
 }
 
+.article-container .hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2rem;
+  background: rgb(0, 0, 0); /* Semi-transparent black background */
+  color: rgba(255, 255, 255, 0.899);
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem; /* Adjust font size as needed */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  box-sizing: inherit;
+}
+
+.article-container:hover .hover-text {
+  opacity: 1; /* Fully visible on hover */
+  visibility: visible;
+}
+
 .project-title {
-  margin: 1rem;
+  margin-bottom: 0.5rem;
   color: black;
 }
 
@@ -383,6 +407,21 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
+.stack-container {
+  display: flex;
+  justify-content:center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
+  gap: 0.5rem;
+}
+.stack {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+}
+
 
 /* CONTACT */
 
